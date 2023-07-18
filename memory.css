@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+body {
+    font-family: 'Roboto Mono', monospace;
+  
+    background-color:#000000;
+}
+h1 { 
+  background: linear-gradient(to right, #1a1b54, #6485e1);
+    font-size: 150%;
+    margin-bottom: .5em;
+    text-align: center;
+    position: relative;
+    color: #fdfdfe;
+  
+}
+label {
+    float: left;
+    width: 8em;
+}
+#img1
+{
+  text-align: center;
+}
+#img1 img{
+
+  width:100%;
+  height: 450px;
+}
+main{
+    border:2px solid black;
+    padding: 0px 2px;
+}
+input, select { 
+    width: 10em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+input[type=checkbox] { 
+    width: 2em;
+}
+header p {
+	text-align: center;
+  color: white;
+}
+header #player, #high_score, #correct, #no_of_cards
+{
+  background: linear-gradient(to right, #0a1d4c, #83aff5);
+  font-size: 150%;
+  margin-bottom: .5em;
+  text-align: center;
+  position: relative;
+  
+}
+#new_game, #player, #high_score, #correct {
+	float: left;
+}
+#cards img {
+  width: 135px;
+	height: 135px;
+
+  
+}
+.clear {
+    clear: both;
+}
+
+.game-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	
+ background-color: orange;
+
+}
+
+.game-card {
+	width: 140px;
+	height: 140px;
+	background:linear-gradient(to right, #0a1d4c, #144ca5);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  
+
+	border-radius: 8px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card-front, .card-back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+    background: none;
+    border-radius: 10px;
+	transition: all 0.5s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.game-card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card-front {	
+    transform: rotateY(180deg);
+}
+
+.game-card.flip{
+    transform: rotateY(180deg);
+}
+
+header{
+  
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Yuji Boku', serif;
+}
+fieldset{
+margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: #ffffff;
+   
+}
+#legend{
+    font-size: 16px;
+     line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Sedgwick Ave', cursive;
+
+   
+}
+
+ul{
+     font-family: 'Sedgwick Ave', cursive;
+}
+
+li{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+#tabs-3{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sedgwick Ave', cursive;
+    background:linear-gradient(orange,rgb(248, 174, 37));
+    color:white;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+#tabs-2
+{
+  background:linear-gradient(orange,rgb(248, 174, 37));
+}
+#tabs-3 > div{
+    margin: 10px 0;
+    text-align: center;
+}
+
+#tabs-3 > div > input, #tabs-3 > div > select{
+    border: none;
+    border-bottom: 3px solid rgb(41, 29, 131);
+}
+
+#tabs-3 > div > input:focus, #tabs-3 > div > select:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+#save_settings{
+  background:linear-gradient(to right, #0a1d4c, #144ca5);
+  color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    padding: 5px 20px;
+    width:200px;
+    height:50px;
+}
+
+#save_settings:hover{
+    color: rosybrown;
+
+}
+
+#new_game a button {
+   
+    background:orange;
+    color:white ;
+    width: 100%;
+    height:80px;
+    text-decoration: none;
+    text-transform: uppercase;
+   border: none;
+   border-radius: 8px;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    
+  }
+
+
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #27272c;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #27272c;
+    }
+  }
+
+#player,#high_score, #correct{
+    font-size:x-large;
+    text-align: center;
+
+}
